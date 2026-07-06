@@ -1,0 +1,31 @@
+GVCMathERP/
+│
+├── app.py
+├── router.py        ← Create it here
+├── config.py
+├── requirements.txt
+├── README.md
+│
+├── components/
+│   ├── header.py
+│   ├── sidebar.py
+│   └── ...
+│
+├── pages/
+│   ├── login.py
+│   ├── dashboard.py
+│   ├── attendance.py
+│   ├── marks.py
+│   └── ...
+│
+├── services/
+│   ├── api.py
+│   ├── auth.py
+│   ├── session.py
+│   └── ...
+│
+├── www/
+│   ├── style.css
+│   └── logo.png
+│
+└── tests/
