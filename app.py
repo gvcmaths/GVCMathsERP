@@ -8,8 +8,9 @@ Version 0.5
 
 from pathlib import Path
 
-from shiny import App, ui, render
-
+from shiny import App, ui, render, reactive
+from services.auth import logout
+from services.session import page, set_page
 from config import (
     PAGE_LOGIN,
     PAGE_DASHBOARD
@@ -65,6 +66,14 @@ def server(input, output, session):
 
     # Initialize Login Page Logic
     login_server(input, output, session)
+    from services.auth import logout
+    from services.session import set_page
+    from config import PAGE_LOGIN
+    @reactive.effect
+    @reactive.event(input.logout_btn)
+    def _logout():
+        logout()
+        set_page(PAGE_LOGIN)
 
     # Reactive Page Renderer
     @output

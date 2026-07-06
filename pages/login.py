@@ -27,7 +27,7 @@ def login_page():
             ),
 
             ui.h2(
-                "GVC Math ERP",
+                "Government Victoria College, Palakkad",                
                 class_="login-title"
             ),
 
@@ -37,8 +37,8 @@ def login_page():
             ),
 
             ui.p(
-                "Government Victoria College, Palakkad",
-                class_="login-college"
+                "GVC Math ERP",
+                class_="login-title"
             ),
 
             ui.hr(),

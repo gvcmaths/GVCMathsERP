@@ -29,13 +29,18 @@ def header():
             ui.div(
 
                 ui.div(
-                    "GVC Math ERP",
+                    "Government Victoria College",
                     class_="erp-title"
+
+                ),
+                ui.div(
+                    "Department of Mathematics", 
+                    class_="erp-subtitle"
                 ),
 
                 ui.div(
-                    "Department of Mathematics",
-                    class_="erp-subtitle"
+                    "GVC Math ERP",                    
+                    class_="erp-system"
                 ),
 
                 class_="title-block"
@@ -72,14 +77,20 @@ def header():
                     class_="bi bi-person-circle"
                 ),
 
-                ui.span(
-                    name(),
-                    class_="admin-user"
-                ),
+                ui.div(
 
-                class_="user-box"
+                    ui.div(
+                        name(),
+                        class_="admin-user"
+                    ),
 
+                ui.div(
+                        "Faculty",
+                        class_="user-role"
+                )
             ),
+            class_="user-box"            
+        ),
 
             ui.input_action_button(
 

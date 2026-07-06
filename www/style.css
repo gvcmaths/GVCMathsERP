@@ -1183,9 +1183,10 @@ LOGIN PAGE
 
 .login-logo{
 
-    width:90px;
+    width:300px;
+    height:auto;
 
-    margin-bottom:20px;
+    margin-bottom:24px;
 
 }
 
@@ -1483,5 +1484,68 @@ LOGIN PAGE
     font-size:12px;
 
     opacity:.7;
+
+}
+.erp-system{
+
+    font-size:13px;
+
+    color:#E5E7EB;
+
+    letter-spacing:1px;
+
+    margin-top:2px;
+
+}
+.user-role{
+
+    font-size:12px;
+
+    opacity:.75;
+
+    color:white;
+
+}
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.erp-footer{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-top:1px solid #E5E7EB;
+
+    color:#6B7280;
+
+}
+
+.footer-title{
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+.footer-subtitle{
+
+    margin-top:4px;
+
+    font-size:14px;
+
+}
+
+.footer-version{
+
+    margin-top:8px;
+
+    font-size:12px;
+
+    color:#9CA3AF;
 
 }
