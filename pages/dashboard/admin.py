@@ -1,12 +1,24 @@
 from shiny import ui
+from datetime import datetime
+from services.session import name
+def greeting():
 
+    hour = datetime.now().hour
+
+    if hour < 12:
+        return "Good Morning"
+
+    elif hour < 17:
+        return "Good Afternoon"
+
+    return "Good Evening"
 
 def dashboard():
-    print("ADMIN DASHBOARD LOADED")
+    
     return ui.div(
 
         ui.h2(
-            "Administrator Dashboard",
+            f"{greeting()}, {name()}",
             class_="page-title"
         ),
 

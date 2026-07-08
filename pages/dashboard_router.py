@@ -1,13 +1,10 @@
 from services.auth import role
 
 
-def dashboard():
-    print("Dispatcher called")
+def dashboard():    
     r = role()
-    print("Role =", r)
-
+    
     if r == "Administrator":
-        print("Loading Admin Dashboard")
         from pages.dashboard.admin import dashboard
         return dashboard()
 
