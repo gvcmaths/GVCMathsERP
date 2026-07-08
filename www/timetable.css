@@ -1,0 +1,155 @@
+/*=========================================================
+    GVC Math ERP
+    Department Timetable
+=========================================================*/
+
+
+/*=========================================================
+    Toolbar
+=========================================================*/
+
+.tt-toolbar{
+
+    display:flex;
+    align-items:flex-end;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+
+}
+
+.toolbar-item{
+
+    min-width:180px;
+
+}
+
+
+/*=========================================================
+    Day Navigation
+=========================================================*/
+
+.day-bar{
+
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+
+}
+
+.day-btn{
+
+    min-width:110px;
+    font-weight:500;
+
+}
+
+.active-day{
+
+    background:#0d6efd !important;
+    color:white !important;
+
+}
+
+
+/*=========================================================
+    Timetable Grid
+=========================================================*/
+
+.timetable-grid{
+
+    width:100%;
+    border-collapse:collapse;
+    background:#ffffff;
+    table-layout:fixed;
+
+}
+
+.timetable-grid th{
+
+    background:#0F4C81;
+    color:#ffffff;
+    padding:12px;
+    border:1px solid #dcdcdc;
+    text-align:center;
+    font-weight:600;
+
+}
+
+.timetable-grid td{
+
+    border:1px solid #dcdcdc;
+    height:70px;
+    padding:8px;
+    text-align:center;
+    vertical-align:middle;
+
+}
+
+
+/*=========================================================
+    Period Column
+=========================================================*/
+
+.period-cell{
+
+    width:90px;
+    background:#f8f9fa;
+    font-weight:bold;
+
+}
+
+
+/*=========================================================
+    Timetable Cells
+=========================================================*/
+
+.tt-cell{
+
+    cursor:pointer;
+    background:#ffffff;
+    transition:background-color 0.2s ease;
+
+}
+
+.tt-cell:hover{
+
+    background:#eef6ff;
+
+}
+
+
+/*=========================================================
+    Lunch Break
+=========================================================*/
+
+.lunch-row{
+
+    background:#fff8dc;
+    font-weight:bold;
+    text-align:center;
+
+}
+
+
+/*=========================================================
+    Responsive
+=========================================================*/
+
+@media (max-width:900px){
+
+    .tt-toolbar{
+
+        flex-direction:column;
+        align-items:flex-start;
+
+    }
+
+    .day-bar{
+
+        overflow-x:auto;
+
+    }
+
+}

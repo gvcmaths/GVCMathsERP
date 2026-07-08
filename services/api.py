@@ -97,10 +97,17 @@ class ERPAPI:
     # Timetable
     # ----------------------------------------------------
 
-    def timetable(self):
+    def timetable(self, academic_year=None, term=None):
 
-        return self.get("timetable")
+        params = {}
 
+        if academic_year is not None:
+            params["academic_year"] = academic_year
+
+        if term is not None:
+            params["term"] = term
+
+        return self.get("timetable", **params)
     # ----------------------------------------------------
     # Attendance
     # ----------------------------------------------------

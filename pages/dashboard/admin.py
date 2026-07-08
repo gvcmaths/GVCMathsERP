@@ -2,7 +2,7 @@ from shiny import ui
 
 
 def dashboard():
-
+    print("ADMIN DASHBOARD LOADED")
     return ui.div(
 
         ui.h2(
@@ -14,14 +14,14 @@ def dashboard():
 
         ui.div(
 
-            card("📅", "Department Timetable"),
-            card("👨‍🏫", "Faculty"),
-            card("🎓", "Students"),
-            card("📚", "Subjects"),
-            card("📝", "Attendance"),
-            card("📊", "Internal Marks"),
-            card("📢", "Notices"),
-            card("⚙️", "Settings"),
+            card("📅", "Department Timetable", "goto_timetable"),
+            card("👨‍🏫", "Faculty", "goto_faculty"),
+            card("🎓", "Students", "goto_students"),
+            card("📚", "Subjects", "goto_subjects"),
+            card("📝", "Attendance", "goto_attendance"),
+            card("📊", "Internal Marks", "goto_marks"),
+            card("📢", "Notices", "goto_notices"),
+            card("⚙️", "Settings", "goto_settings"),
 
             class_="dashboard-grid"
 
@@ -30,13 +30,19 @@ def dashboard():
     )
 
 
-def card(icon, title):
+def card(icon, title, button_id):
 
-    return ui.div(
+    return ui.input_action_button(
 
-        ui.div(icon, class_="card-icon"),
+        button_id,
 
-        ui.div(title, class_="card-title"),
+        ui.div(
+
+            ui.div(icon, class_="card-icon"),
+
+            ui.div(title, class_="card-title"),
+
+        ),
 
         class_="dashboard-card"
 

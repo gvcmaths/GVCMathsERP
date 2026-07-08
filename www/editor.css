@@ -1,0 +1,31 @@
+/*==================================================
+TIMETABLE EDITOR
+==================================================*/
+
+.editor-panel{
+
+    background:#ffffff;
+
+    border:1px solid #dddddd;
+
+    border-radius:8px;
+
+    padding:20px;
+
+    min-height:560px;
+
+}
+
+.editor-title{
+
+    font-weight:600;
+
+    color:#0F4C81;
+
+}
+
+.editor-panel .form-group{
+
+    margin-bottom:15px;
+
+}

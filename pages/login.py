@@ -9,7 +9,9 @@ Version 0.5
 from shiny import ui, reactive, render
 
 from services.auth import authenticate, AuthenticationError
-
+from services.session import set_page
+from config import PAGE_DASHBOARD
+from config import PAGE_TIMETABLE
 
 # =========================================================
 # Login UI
@@ -116,6 +118,9 @@ def login_server(input, output, session):
                 input.password()
 
             )
+            
+            #set_page(PAGE_TIMETABLE)
+            set_page(PAGE_DASHBOARD)
 
             login_error.set("")
 
